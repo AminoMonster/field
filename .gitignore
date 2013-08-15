@@ -4,10 +4,13 @@ users/*
 app/vendor/*
 var/*
 stores/*
+!var/themes_repository/
+!var/themes_repository/*
+!var/database/
 !var/database/*
 !var/.htaccess
 !var/index.php
-!var/themes_repository/*
+
 _TEMP
 local_conf.php
 sph.php
