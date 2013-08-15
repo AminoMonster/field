@@ -1,0 +1,15 @@
+.author_product_type_area {
+    padding: 10px;
+    background: #FFFF00;
+    line-height: 20px;
+    border-radius: 8px;
+}
+
+.author_product_type_area span {
+    font-size: 15px; 
+    padding-left: 5px;
+}
+
+.story_style {
+    text-transform: capitalize;
+}

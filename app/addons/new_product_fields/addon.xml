@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon scheme="2.0">
+	<id>new_product_fields</id>
+	<name>New product fields</name>
+	<description>New product fields</description>
+	<version>1.0</version>
+	<priority>100500</priority>
+	<status>active</status>
+        
+    <language_variables>
+        <!-- 
+            @id - language variable identifier, 
+            @lang - the language it is added for -->
+        <item lang="en" id="author">Author</item>
+        <item lang="en" id="product_type">Product type</item>
+        <item lang="en" id="comment">Comment</item>
+        <item lang="en" id="novel">Novel</item>
+        <item lang="en" id="story">Story</item>
+        <item lang="en" id="stories">Stories</item>
+        <item lang="en" id="poetry">Poetry</item>
+        <item lang="en" id="please_select">--Please select--</item>
+ 
+        <item lang="ru" id="author">Автор</item>
+        <item lang="ru" id="product_type">Тип товара</item>
+        <item lang="ru" id="comment">Комментарии</item>
+        <item lang="ru" id="novel">Роман</item>
+        <item lang="ru" id="story">Повесть</item>
+        <item lang="ru" id="stories">Рассказы</item>
+        <item lang="ru" id="poetry">Стихи</item>
+        <item lang="ru" id="please_select">--Пожалуйста выберите--</item>        
+    </language_variables>
+    
+    <queries>
+        <item for="install">
+            ALTER TABLE  `?:product_descriptions` ADD `author` VARCHAR(255) NOT NULL
+        </item>
+        <item for="install">
+            ALTER TABLE  `?:product_descriptions` ADD `story_type` VARCHAR(255) NOT NULL
+        </item>
+        <item for="install">
+            ALTER TABLE  `?:product_descriptions` ADD `comment` VARCHAR(255) NOT NULL
+        </item>
+
+        <item for="uninstall">
+            ALTER TABLE  `?:product_descriptions` DROP `author`
+        </item>
+        <item for="uninstall">
+            ALTER TABLE  `?:product_descriptions` DROP `story_type`
+        </item>
+        <item for="uninstall">
+            ALTER TABLE  `?:product_descriptions` DROP `comment`
+        </item>
+    </queries>
+</addon>

@@ -1,5 +1,6 @@
 design/backend/css/twitterbootstrap.css
 users/*
+images/thumbnails/
 app/vendor/*
 var/*
 stores/*
